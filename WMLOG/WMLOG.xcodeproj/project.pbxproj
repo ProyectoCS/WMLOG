@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E8DC15F19071C2700760BAB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DC15D19071C2700760BAB /* Default.png */; };
+		7E8DC16019071C2700760BAB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DC15E19071C2700760BAB /* Default@2x.png */; };
 		88AE8639190710690038E589 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AE8638190710690038E589 /* Foundation.framework */; };
 		88AE863B190710690038E589 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AE863A190710690038E589 /* CoreGraphics.framework */; };
 		88AE863D190710690038E589 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AE863C190710690038E589 /* UIKit.framework */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E8DC15D19071C2700760BAB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7E8DC15E19071C2700760BAB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		88AE8635190710690038E589 /* WMLOG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMLOG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AE8638190710690038E589 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88AE863A190710690038E589 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +125,8 @@
 		88AE863F190710690038E589 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7E8DC15D19071C2700760BAB /* Default.png */,
+				7E8DC15E19071C2700760BAB /* Default@2x.png */,
 				88AE8640190710690038E589 /* WMLOG-Info.plist */,
 				88AE8641190710690038E589 /* InfoPlist.strings */,
 				88AE8644190710690038E589 /* main.m */,
@@ -224,7 +230,9 @@
 			files = (
 				88AE8668190714680038E589 /* Main.storyboard in Resources */,
 				88AE8643190710690038E589 /* InfoPlist.strings in Resources */,
+				7E8DC16019071C2700760BAB /* Default@2x.png in Resources */,
 				88AE864B190710690038E589 /* Images.xcassets in Resources */,
+				7E8DC15F19071C2700760BAB /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +368,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WMLOG/WMLOG-Prefix.pch";
 				INFOPLIST_FILE = "WMLOG/WMLOG-Info.plist";
@@ -373,7 +380,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WMLOG/WMLOG-Prefix.pch";
 				INFOPLIST_FILE = "WMLOG/WMLOG-Info.plist";
@@ -441,6 +447,7 @@
 				88AE8663190710690038E589 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88AE8664190710690038E589 /* Build configuration list for PBXNativeTarget "WMLOGTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +456,7 @@
 				88AE8666190710690038E589 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
