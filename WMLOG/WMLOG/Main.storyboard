@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Config InicialVC-->
         <scene sceneID="10R-ej-Y9c">
             <objects>
-                <viewController id="Ddn-Ia-3c4" sceneMemberID="viewController">
+                <viewController id="Ddn-Ia-3c4" customClass="ConfigInicialVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z8C-Nn-4Oz"/>
                         <viewControllerLayoutGuide type="bottom" id="yT7-bH-rMu"/>
@@ -91,6 +91,9 @@
                                 <rect key="frame" x="251" y="262" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="onTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="saveExtraer:" destination="Ddn-Ia-3c4" eventType="touchUpInside" id="bMm-sv-Dxt"/>
+                                </connections>
                             </switch>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5da-xT-FR3">
                                 <rect key="frame" x="0.0" y="21" width="320" height="44"/>
@@ -103,6 +106,9 @@
                                     <navigationItem title="Configuracion" id="Y6m-gc-hKZ">
                                         <barButtonItem key="rightBarButtonItem" title="Continuar" id="aRw-DH-Xeo">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="saveConfig:" destination="Ddn-Ia-3c4" id="rdf-lR-f2D"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -112,10 +118,45 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="segControlAmbiente" destination="QTF-AE-8yM" id="WpP-5D-Mey"/>
+                        <outlet property="swAuthen" destination="7hA-nh-ufk" id="XLa-56-FKD"/>
+                        <outlet property="txtPass" destination="8cY-dP-vmo" id="Xqt-sa-yCj"/>
+                        <outlet property="txtPort" destination="Jow-ol-vC9" id="Jw0-0P-6eN"/>
+                        <outlet property="txtServer" destination="FFV-hf-byo" id="tdh-4b-BCO"/>
+                        <outlet property="txtUser" destination="WQI-jN-nap" id="DEM-uY-s4P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJ8-6j-Bu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="186" y="-242"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="v1j-d0-DkW">
+            <objects>
+                <viewController storyboardIdentifier="principalMenu" id="nep-Kl-RKX" customClass="Menu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fsg-7S-LdI"/>
+                        <viewControllerLayoutGuide type="bottom" id="N5F-Kh-jg4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Bl-2q-TS1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEnu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-wL-sei">
+                                <rect key="frame" x="170" y="175" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oex-9y-Ads" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="-194"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

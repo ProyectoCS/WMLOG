@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E7F14401909DCC300A628E5 /* DefaultConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F143F1909DCC300A628E5 /* DefaultConfigManager.m */; };
 		7E8DC15F19071C2700760BAB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DC15D19071C2700760BAB /* Default.png */; };
 		7E8DC16019071C2700760BAB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DC15E19071C2700760BAB /* Default@2x.png */; };
+		7EAB8B02190B252000F44A13 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB8B01190B252000F44A13 /* Menu.m */; };
+		7EC3BFDE190856EA00404B77 /* ConfigInicialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3BFDD190856EA00404B77 /* ConfigInicialVC.m */; };
+		7EC3BFE5190857D400404B77 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC3BFE4190857D400404B77 /* libsqlite3.dylib */; };
+		7EC3BFE91908806000404B77 /* BaseDatosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3BFE81908806000404B77 /* BaseDatosManager.m */; };
 		88AE8639190710690038E589 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AE8638190710690038E589 /* Foundation.framework */; };
 		88AE863B190710690038E589 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AE863A190710690038E589 /* CoreGraphics.framework */; };
 		88AE863D190710690038E589 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AE863C190710690038E589 /* UIKit.framework */; };
@@ -35,8 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E7F143E1909DCC300A628E5 /* DefaultConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultConfigManager.h; sourceTree = "<group>"; };
+		7E7F143F1909DCC300A628E5 /* DefaultConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultConfigManager.m; sourceTree = "<group>"; };
 		7E8DC15D19071C2700760BAB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7E8DC15E19071C2700760BAB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7EAB8B00190B252000F44A13 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		7EAB8B01190B252000F44A13 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
+		7EC3BFDC190856EA00404B77 /* ConfigInicialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigInicialVC.h; sourceTree = "<group>"; };
+		7EC3BFDD190856EA00404B77 /* ConfigInicialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigInicialVC.m; sourceTree = "<group>"; };
+		7EC3BFE4190857D400404B77 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		7EC3BFE71908805F00404B77 /* BaseDatosManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDatosManager.h; sourceTree = "<group>"; };
+		7EC3BFE81908806000404B77 /* BaseDatosManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDatosManager.m; sourceTree = "<group>"; };
 		88AE8635190710690038E589 /* WMLOG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMLOG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AE8638190710690038E589 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88AE863A190710690038E589 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC3BFE5190857D400404B77 /* libsqlite3.dylib in Frameworks */,
 				88AE863B190710690038E589 /* CoreGraphics.framework in Frameworks */,
 				88AE863D190710690038E589 /* UIKit.framework in Frameworks */,
 				88AE8639190710690038E589 /* Foundation.framework in Frameworks */,
@@ -80,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EC3BFE619087FC200404B77 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				7EC3BFE71908805F00404B77 /* BaseDatosManager.h */,
+				7EC3BFE81908806000404B77 /* BaseDatosManager.m */,
+				7E7F143E1909DCC300A628E5 /* DefaultConfigManager.h */,
+				7E7F143F1909DCC300A628E5 /* DefaultConfigManager.m */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
 		88AE862C190710690038E589 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +128,7 @@
 		88AE8637190710690038E589 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EC3BFE4190857D400404B77 /* libsqlite3.dylib */,
 				88AE8638190710690038E589 /* Foundation.framework */,
 				88AE863A190710690038E589 /* CoreGraphics.framework */,
 				88AE863C190710690038E589 /* UIKit.framework */,
@@ -113,11 +140,16 @@
 		88AE863E190710690038E589 /* WMLOG */ = {
 			isa = PBXGroup;
 			children = (
+				7EC3BFE619087FC200404B77 /* Commons */,
 				88AE8647190710690038E589 /* AppDelegate.h */,
 				88AE8648190710690038E589 /* AppDelegate.m */,
 				88AE864A190710690038E589 /* Images.xcassets */,
 				88AE863F190710690038E589 /* Supporting Files */,
 				88AE8667190714680038E589 /* Main.storyboard */,
+				7EC3BFDC190856EA00404B77 /* ConfigInicialVC.h */,
+				7EC3BFDD190856EA00404B77 /* ConfigInicialVC.m */,
+				7EAB8B00190B252000F44A13 /* Menu.h */,
+				7EAB8B01190B252000F44A13 /* Menu.m */,
 			);
 			path = WMLOG;
 			sourceTree = "<group>";
@@ -252,7 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AE8649190710690038E589 /* AppDelegate.m in Sources */,
+				7EC3BFDE190856EA00404B77 /* ConfigInicialVC.m in Sources */,
+				7EAB8B02190B252000F44A13 /* Menu.m in Sources */,
+				7EC3BFE91908806000404B77 /* BaseDatosManager.m in Sources */,
 				88AE8645190710690038E589 /* main.m in Sources */,
+				7E7F14401909DCC300A628E5 /* DefaultConfigManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
