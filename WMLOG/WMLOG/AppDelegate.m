@@ -16,10 +16,11 @@
         _configs = [[DefaultConfigManager getInstance]getData];
     if(_configs == nil){
         NSLog(@"%s","muestra config inicial");
-    }else{        
+    }else{
+        NSLog(@"%s","muestra menu inicio");
         self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"principalMenu"];
+        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MenuInicio"];
         self.window.rootViewController = viewController;
         [self.window makeKeyAndVisible];
         

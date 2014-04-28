@@ -7,7 +7,6 @@
         <!--Table View Controller - Opciones-->
         <scene sceneID="dPr-Yx-Qw3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v73-N0-NE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Qa2-aa-vPb" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CbO-BR-9Fm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -33,7 +32,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="71B-tV-Zf4" kind="push" id="CNx-mT-9gs"/>
+                                            <segue destination="71B-tV-Zf4" kind="push" identifier="Informacion" id="CNx-mT-9gs"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="82g-yw-3Zr">
@@ -52,7 +51,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gDc-4b-rge" kind="push" id="yxi-h3-4kT"/>
+                                            <segue destination="gDc-4b-rge" kind="push" identifier="Interfaces" id="yxi-h3-4kT"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="JoQ-x2-Enf">
@@ -71,7 +70,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="l8M-CD-hX8" kind="push" id="pf3-n3-ctX"/>
+                                            <segue destination="l8M-CD-hX8" kind="push" identifier="Monitoreo" id="pf3-n3-ctX"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qv3-uV-8rA">
@@ -90,7 +89,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="P1c-ju-bcD" kind="push" id="baC-6K-dNH"/>
+                                            <segue destination="P1c-ju-bcD" kind="push" identifier="MonitoreoDiario" id="baC-6K-dNH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="H0Z-yH-tQo">
@@ -109,7 +108,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="XWB-oA-ID4" kind="push" id="Cg8-XN-CZ0"/>
+                                            <segue destination="XWB-oA-ID4" kind="push" identifier="Estadisticas" id="Cg8-XN-CZ0"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ri7-cd-fBc">
@@ -128,7 +127,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="nep-Kl-RKX" kind="push" id="XY1-mO-Xfv"/>
+                                            <segue destination="nep-Kl-RKX" kind="push" identifier="Acerda de" id="XY1-mO-Xfv"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -147,13 +146,14 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v73-N0-NE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578" y="-850"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RyA-kf-nCe">
             <objects>
-                <navigationController definesPresentationContext="YES" id="HYg-fw-vUW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MenuInicio" definesPresentationContext="YES" id="HYg-fw-vUW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OPU-yQ-21U">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -163,9 +163,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAj-Yg-2pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186" y="-814"/>
+            <point key="canvasLocation" x="54" y="-850"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Informacion-->
         <scene sceneID="aMd-Bz-7kD">
             <objects>
                 <viewController id="71B-tV-Zf4" sceneMemberID="viewController">
@@ -178,13 +178,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yng-MW-LrD"/>
+                    <navigationItem key="navigationItem" title="Informacion" id="Yng-MW-LrD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzt-Dw-enG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272" y="-1590"/>
+            <point key="canvasLocation" x="1272" y="-2730"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Interfaces-->
         <scene sceneID="sc3-Vj-bnX">
             <objects>
                 <viewController id="gDc-4b-rge" sceneMemberID="viewController">
@@ -197,13 +197,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xLF-lU-OjL"/>
+                    <navigationItem key="navigationItem" title="Interfaces" id="xLF-lU-OjL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqq-PN-G1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="-1385"/>
+            <point key="canvasLocation" x="1272" y="-1481"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Monitoreo-->
         <scene sceneID="khE-fV-EHW">
             <objects>
                 <viewController id="l8M-CD-hX8" sceneMemberID="viewController">
@@ -216,13 +216,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JCP-XV-jnG"/>
+                    <navigationItem key="navigationItem" title="Monitoreo" id="JCP-XV-jnG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUv-Zd-889" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377" y="-1287"/>
+            <point key="canvasLocation" x="1272" y="-850"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Monitoreo-->
         <scene sceneID="QGG-yc-1B9">
             <objects>
                 <viewController id="P1c-ju-bcD" sceneMemberID="viewController">
@@ -235,13 +235,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="leI-Qv-HdF"/>
+                    <navigationItem key="navigationItem" title="Monitoreo" id="leI-Qv-HdF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ih-tb-Ug5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365" y="-1169"/>
+            <point key="canvasLocation" x="1272" y="-2093"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Estadisticas-->
         <scene sceneID="cQk-Fe-UjR">
             <objects>
                 <viewController id="XWB-oA-ID4" sceneMemberID="viewController">
@@ -254,11 +254,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tru-A0-8XU"/>
+                    <navigationItem key="navigationItem" title="Estadisticas" id="tru-A0-8XU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pp5-PW-TJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="-861"/>
+            <point key="canvasLocation" x="1272" y="-201"/>
         </scene>
         <!--Config InicialVC - Configuracion-->
         <scene sceneID="10R-ej-Y9c">
@@ -348,17 +348,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="onTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQW-ty-V0t">
+                                <rect key="frame" x="137" y="366" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Listo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Configuracion" id="jaY-OO-Se4">
-                        <barButtonItem key="rightBarButtonItem" title="Listo" id="aRw-DH-Xeo">
+                    <toolbarItems>
+                        <barButtonItem title="Listo" id="aRw-DH-Xeo">
                             <connections>
                                 <action selector="saveConfig:" destination="Ddn-Ia-3c4" id="rdf-lR-f2D"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Configuracion" id="jaY-OO-Se4"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segControlAmbiente" destination="QTF-AE-8yM" id="WpP-5D-Mey"/>
@@ -371,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJ8-6j-Bu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="-188"/>
+            <point key="canvasLocation" x="1272" y="428"/>
         </scene>
         <!--Menu - Acerda de.-->
         <scene sceneID="v1j-d0-DkW">
@@ -384,22 +391,13 @@
                     <view key="view" contentMode="scaleToFill" id="2Bl-2q-TS1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEnu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-wL-sei">
-                                <rect key="frame" x="170" y="175" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cTm-Vt-QOE"/>
+                    <navigationItem key="navigationItem" title="Acerca de" id="cTm-Vt-QOE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oex-9y-Ads" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392" y="380"/>
+            <point key="canvasLocation" x="1272" y="1052"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

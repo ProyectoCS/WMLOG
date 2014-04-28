@@ -24,14 +24,7 @@
     return self;
 }
 -(void)viewDidAppear:(BOOL)animated{
-    if(_configs == nil){
-        NSLog(@"%s","muestra config inicial");
-        _txtServer.text = @"muestra config inicial";
-    }else{
-        /*NSLog(@"%s","muestra menu");
-         _txtServer.text = @"muestra menu";
-        [self goToMenu];*/
-    }
+    NSLog(@"la pantalla aparecio");
 }
 - (void)viewDidLoad
 {
