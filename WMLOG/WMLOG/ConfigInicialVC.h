@@ -17,7 +17,7 @@
 @property(strong,nonatomic)IBOutlet UITextField *txtPass;
 @property(strong,nonatomic)IBOutlet UISwitch *swAuthen;
 @property(strong,nonatomic)IBOutlet UISegmentedControl *segControlAmbiente;
-@property(strong,nonatomic)NSArray *configs;
+//@property(strong,nonatomic)NSArray *configs;
 
 -(IBAction)saveConfig:(id)sender;
 -(IBAction)saveExtraer:(id)sender;

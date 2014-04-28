@@ -24,21 +24,21 @@
     return self;
 }
 -(void)viewDidAppear:(BOOL)animated{
-    if(_configs == nil){
+    /*if(_configs == nil){
         NSLog(@"%s","muestra config inicial");
         _txtServer.text = @"muestra config inicial";
     }else{
         /*NSLog(@"%s","muestra menu");
          _txtServer.text = @"muestra menu";*/
-        [self goToMenu];
-    }
+       /* [self goToMenu];
+    }*/
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSLog(@"%s","Cargando pantalla");
     _bdManager = [BaseDatosManager getInstance];
-    _configs = [[DefaultConfigManager getInstance]getData];
+    //_configs = [[DefaultConfigManager getInstance]getData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,8 +66,8 @@
         //NSLog(@"%@",_configs);
 }
 -(IBAction)saveExtraer:(id)sender{
-    _configs = [[DefaultConfigManager getInstance]getData];
-    NSLog(@"%@",_configs);
+    /*_configs = [[DefaultConfigManager getInstance]getData];
+    NSLog(@"%@",_configs);*/
 }
 -(void)goToMenu{
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
