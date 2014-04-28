@@ -82,6 +82,8 @@ static BaseDatosManager *_instanceBdM;
     return YES;
     
 }
+
+//falta implementar metodos de consulta e insercion
 -(NSArray *) selectData{
     return nil;
 }

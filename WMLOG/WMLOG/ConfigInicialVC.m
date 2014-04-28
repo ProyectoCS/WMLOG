@@ -36,9 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%s","Cargando pantalla");
+    NSLog(@"%s","la pantalla cargo");
+
+    //obtiene la instancia a la BaseDatosManager, crea la Base de datos y la abre;
     _bdManager = [BaseDatosManager getInstance];
-    _configs = [[DefaultConfigManager getInstance]getData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,11 +48,15 @@
     // Dispose of any resources that can be recreated.
 }
 -(IBAction)saveConfig:(id)sender{
-     NSString *env;
+    NSString *env;
+    
+      //esconde el teclado
      [_txtServer resignFirstResponder];
      [_txtPort resignFirstResponder];
      [_txtUser resignFirstResponder];
      [_txtPass resignFirstResponder];
+
+        //evalua el ambiente seleccionado
         if([_segControlAmbiente  selectedSegmentIndex] == 0){
             env = @"QA";
         }else if ([_segControlAmbiente  selectedSegmentIndex] == 1){
@@ -59,15 +64,13 @@
         }else{
             env = @"PRODUCCION";
         }
-        
+    
+        //Obtiene instancia de la clase DefaultConfigManager y guarda los datos que le mandamos a saveData
+        //isSaveData = variable de configuracion para saber si ya guardo los datos en el NSUserDefaults
         [[DefaultConfigManager getInstance]saveData:[_txtServer text] portt:[_txtPort text] userr:[_txtUser text] passs:[_txtPass text] reqAuthh:[_swAuthen isOn] ? @"1" : @"0" envv:env isSavedd:@"true"];
+    
+        //Redirecciona el menu de la App
         [self goToMenu];
-        
-        //NSLog(@"%@",_configs);
-}
--(IBAction)saveExtraer:(id)sender{
-    _configs = [[DefaultConfigManager getInstance]getData];
-    NSLog(@"%@",_configs);
 }
 -(void)goToMenu{
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

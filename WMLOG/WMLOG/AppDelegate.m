@@ -7,11 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "DefaultConfigManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+        _configs = [[DefaultConfigManager getInstance]getData];
+    if(_configs == nil){
+        NSLog(@"%s","muestra config inicial");
+    }else{        
+        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"principalMenu"];
+        self.window.rootViewController = viewController;
+        [self.window makeKeyAndVisible];
+        
+    }
     return YES;
 }
 
