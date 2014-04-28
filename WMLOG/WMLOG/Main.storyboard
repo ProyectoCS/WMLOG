@@ -91,9 +91,6 @@
                                 <rect key="frame" x="251" y="262" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="onTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="saveExtraer:" destination="Ddn-Ia-3c4" eventType="touchUpInside" id="bMm-sv-Dxt"/>
-                                </connections>
                             </switch>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5da-xT-FR3">
                                 <rect key="frame" x="0.0" y="21" width="320" height="44"/>
