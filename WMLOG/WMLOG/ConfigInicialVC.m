@@ -29,8 +29,8 @@
         _txtServer.text = @"muestra config inicial";
     }else{
         /*NSLog(@"%s","muestra menu");
-         _txtServer.text = @"muestra menu";*/
-        [self goToMenu];
+         _txtServer.text = @"muestra menu";
+        [self goToMenu];*/
     }
 }
 - (void)viewDidLoad
