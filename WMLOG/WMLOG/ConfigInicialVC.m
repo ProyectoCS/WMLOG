@@ -33,6 +33,31 @@
 
     //obtiene la instancia a la BaseDatosManager, crea la Base de datos y la abre;
     _bdManager = [BaseDatosManager getInstance];
+    //obtiene la instancia a DefaultConfigManager y obtiene los datos guardados en la configuracion.
+    _configs = [[DefaultConfigManager getInstance]getData];
+    
+    //extrae los datos de configuracion cada que se entre a la pantalla de configuracion inicial
+    if([[_configs objectAtIndex:[_configs count] - 1] isEqualToString:@"true"]){
+        _txtServer.text = [NSString stringWithFormat:@"%@",[_configs objectAtIndex:0]];
+        _txtPort.text = [NSString stringWithFormat:@"%@",[_configs objectAtIndex:1]];
+        _txtUser.text =[NSString stringWithFormat:@"%@",[_configs objectAtIndex:2]];
+        _txtPass.text =[NSString stringWithFormat:@"%@",[_configs objectAtIndex:3]];
+
+        if([[_configs objectAtIndex:4] integerValue] == 1){
+            [_swAuthen setOn:YES];
+        }else{
+            [_swAuthen setOn:NO];
+        }
+        
+        if([[_configs objectAtIndex:5] isEqualToString:@"QA"]){
+            [_segControlAmbiente setSelectedSegmentIndex:0];
+        }else if([[_configs objectAtIndex:5] isEqualToString:@"DESARROLLO"]){
+            [_segControlAmbiente setSelectedSegmentIndex:1];
+        }else{
+            [_segControlAmbiente setSelectedSegmentIndex:2];
+        }
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,12 +67,9 @@
 }
 -(IBAction)saveConfig:(id)sender{
     NSString *env;
-    
+
       //esconde el teclado
-     [_txtServer resignFirstResponder];
-     [_txtPort resignFirstResponder];
-     [_txtUser resignFirstResponder];
-     [_txtPass resignFirstResponder];
+    [self hideKeyboard];
 
         //evalua el ambiente seleccionado
         if([_segControlAmbiente  selectedSegmentIndex] == 0){
@@ -65,10 +87,21 @@
         //Redirecciona el menu de la App
         [self goToMenu];
 }
+-(IBAction)closeKeyBoard:(id)sender{
+    [self hideKeyboard];
+}
 -(void)goToMenu{
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *menuViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"principalMenu"];
+    UIViewController *menuViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"MenuInicio"];
     [self presentViewController:menuViewController animated:YES completion:nil];
+}
+
+//esconde el teclado cuando tocas DONE en el teclado 
+-(void)hideKeyboard{
+    [_txtServer resignFirstResponder];
+    [_txtPort resignFirstResponder];
+    [_txtUser resignFirstResponder];
+    [_txtPass resignFirstResponder];
 }
 /*
 #pragma mark - Navigation
