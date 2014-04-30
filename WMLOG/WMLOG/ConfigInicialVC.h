@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BaseDatosManager.h"
 #import <sqlite3.h>
+#import "Validaciones.h"
+
 
 @interface ConfigInicialVC : UIViewController
 @property(strong,nonatomic)IBOutlet UITextField *txtServer;
@@ -18,9 +20,12 @@
 @property(strong,nonatomic)IBOutlet UISwitch *swAuthen;
 @property(strong,nonatomic)IBOutlet UISegmentedControl *segControlAmbiente;
 @property(strong,nonatomic) NSArray *configs;
+@property(nonatomic) Validaciones *val;
 
 -(IBAction)saveConfig:(id)sender;
 -(IBAction)closeKeyBoard:(id)sender;
 -(void)hideKeyboard;
 -(void)goToMenu;
+-(BOOL)isAllFieldsFill;
+-(void)showAlert:(UIAlertView *)alert withMessage:(NSString *) message withTitle: (NSString *) title;
 @end

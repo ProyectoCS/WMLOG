@@ -12,6 +12,7 @@
 		7E8DC16019071C2700760BAB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DC15E19071C2700760BAB /* Default@2x.png */; };
 		7EAB8B02190B252000F44A13 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB8B01190B252000F44A13 /* Menu.m */; };
 		7EAF520E190FE99700C5A1EA /* Validaciones.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAF520D190FE99700C5A1EA /* Validaciones.m */; };
+		7EAF52121910656100C5A1EA /* PeticionWS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAF52111910656100C5A1EA /* PeticionWS.m */; };
 		7EC3BFDE190856EA00404B77 /* ConfigInicialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3BFDD190856EA00404B77 /* ConfigInicialVC.m */; };
 		7EC3BFE5190857D400404B77 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC3BFE4190857D400404B77 /* libsqlite3.dylib */; };
 		7EC3BFE91908806000404B77 /* BaseDatosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3BFE81908806000404B77 /* BaseDatosManager.m */; };
@@ -49,6 +50,8 @@
 		7EAB8B01190B252000F44A13 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		7EAF520C190FE99700C5A1EA /* Validaciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validaciones.h; sourceTree = "<group>"; };
 		7EAF520D190FE99700C5A1EA /* Validaciones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validaciones.m; sourceTree = "<group>"; };
+		7EAF52101910656100C5A1EA /* PeticionWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeticionWS.h; sourceTree = "<group>"; };
+		7EAF52111910656100C5A1EA /* PeticionWS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeticionWS.m; sourceTree = "<group>"; };
 		7EC3BFDC190856EA00404B77 /* ConfigInicialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigInicialVC.h; sourceTree = "<group>"; };
 		7EC3BFDD190856EA00404B77 /* ConfigInicialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigInicialVC.m; sourceTree = "<group>"; };
 		7EC3BFE4190857D400404B77 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -98,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EAF520F1910653D00C5A1EA /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				7EAF52101910656100C5A1EA /* PeticionWS.h */,
+				7EAF52111910656100C5A1EA /* PeticionWS.m */,
+			);
+			name = WebServices;
+			sourceTree = "<group>";
+		};
 		7EC3BFE619087FC200404B77 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +157,7 @@
 		88AE863E190710690038E589 /* WMLOG */ = {
 			isa = PBXGroup;
 			children = (
+				7EAF520F1910653D00C5A1EA /* WebServices */,
 				7EC3BFE619087FC200404B77 /* Commons */,
 				88AE8647190710690038E589 /* AppDelegate.h */,
 				88AE8648190710690038E589 /* AppDelegate.m */,
@@ -292,6 +305,7 @@
 				7EC3BFDE190856EA00404B77 /* ConfigInicialVC.m in Sources */,
 				7EAB8B02190B252000F44A13 /* Menu.m in Sources */,
 				7EC3BFE91908806000404B77 /* BaseDatosManager.m in Sources */,
+				7EAF52121910656100C5A1EA /* PeticionWS.m in Sources */,
 				7EAF520E190FE99700C5A1EA /* Validaciones.m in Sources */,
 				88AE8645190710690038E589 /* main.m in Sources */,
 				7E7F14401909DCC300A628E5 /* DefaultConfigManager.m in Sources */,

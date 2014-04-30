@@ -31,10 +31,12 @@
     [super viewDidLoad];
     NSLog(@"%s","la pantalla cargo");
 
-    //obtiene la instancia a la BaseDatosManager, crea la Base de datos y la abre;
+    ///obtiene la instancia a la BaseDatosManager, crea la Base de datos y la abre;
     _bdManager = [BaseDatosManager getInstance];
-    //obtiene la instancia a DefaultConfigManager y obtiene los datos guardados en la configuracion.
+    ///obtiene la instancia a DefaultConfigManager y obtiene los datos guardados en la configuracion.
     _configs = [[DefaultConfigManager getInstance]getData];
+    //instancia para validar 
+    _val = [[Validaciones alloc]init];
     
     //extrae los datos de configuracion cada que se entre a la pantalla de configuracion inicial
     if([[_configs objectAtIndex:[_configs count] - 1] isEqualToString:@"true"]){
@@ -67,25 +69,28 @@
 }
 -(IBAction)saveConfig:(id)sender{
     NSString *env;
-
       //esconde el teclado
     [self hideKeyboard];
-
+    
+    //valida los campos necesarios
+    if(![self isAllFieldsFill]){
+        return;
+    }
         //evalua el ambiente seleccionado
-        if([_segControlAmbiente  selectedSegmentIndex] == 0){
-            env = @"QA";
-        }else if ([_segControlAmbiente  selectedSegmentIndex] == 1){
-            env = @"DESARROLLO";
-        }else{
-            env = @"PRODUCCION";
-        }
+    if([_segControlAmbiente  selectedSegmentIndex] == 0){
+        env = @"QA";
+    }else if ([_segControlAmbiente  selectedSegmentIndex] == 1){
+        env = @"DESARROLLO";
+    }else{
+        env = @"PRODUCCION";
+    }
     
-        //Obtiene instancia de la clase DefaultConfigManager y guarda los datos que le mandamos a saveData
-        //isSaveData = variable de configuracion para saber si ya guardo los datos en el NSUserDefaults
-        [[DefaultConfigManager getInstance]saveData:[_txtServer text] portt:[_txtPort text] userr:[_txtUser text] passs:[_txtPass text] reqAuthh:[_swAuthen isOn] ? @"1" : @"0" envv:env isSavedd:@"true"];
+    //Obtiene instancia de la clase DefaultConfigManager y guarda los datos que le mandamos a saveData
+    //isSaveData = variable de configuracion para saber si ya guardo los datos en el NSUserDefaults
+    [[DefaultConfigManager getInstance]saveData:[_txtServer text] portt:[_txtPort text] userr:[_txtUser text] passs:[_txtPass text] reqAuthh:[_swAuthen isOn] ? @"1" : @"0" envv:env isSavedd:@"true"];
     
-        //Redirecciona el menu de la App
-        [self goToMenu];
+    //Redirecciona el menu de la App
+    [self goToMenu];
 }
 -(IBAction)closeKeyBoard:(id)sender{
     [self hideKeyboard];
@@ -95,13 +100,51 @@
     UIViewController *menuViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"MenuInicio"];
     [self presentViewController:menuViewController animated:YES completion:nil];
 }
-
 //esconde el teclado cuando tocas DONE en el teclado 
 -(void)hideKeyboard{
     [_txtServer resignFirstResponder];
     [_txtPort resignFirstResponder];
     [_txtUser resignFirstResponder];
     [_txtPass resignFirstResponder];
+}
+-(void)showAlert:(UIAlertView *)alert withMessage:(NSString *) message withTitle: (NSString *) title{
+    alert = [[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];
+    [alert show];
+}
+-(BOOL)isAllFieldsFill{
+    UIAlertView *alert;
+    if(![_val isEmpty:_txtServer.text]){
+        if(![_val isEmpty:_txtPort.text]){
+            if(![_val isEmpty:_txtUser.text]){
+                if(![_val isEmpty:_txtPass.text]){
+                    if([_val isNumberOk:_txtPort.text]){
+                        if([_val isEmailOk:_txtUser.text]){
+                            NSLog(@"%s","NO HAY CAMPOS VACIOS");
+                            return YES;
+                        }else{
+                            [self showAlert:alert withMessage:@"Escibe un correo valido" withTitle:@"Cuidado!"];
+                            return NO;
+                        }
+                    }else{
+                        [self showAlert:alert withMessage:@"El puerto solo recibe numeros" withTitle:@"Cuidado!"];
+                        return NO;
+                    }
+                }else{
+                    [self showAlert:alert withMessage:@"El password esta vacio" withTitle:@"Cuidado!"];
+                    return NO;
+                }
+            }else{
+                [self showAlert:alert withMessage:@"El usuario esta vacio" withTitle:@"Cuidado!"];
+                return NO;
+            }
+        }else{
+            [self showAlert:alert withMessage:@"El puerto esta vacio" withTitle:@"Cuidado!"];
+            return NO;
+        }
+    }else{
+        [self showAlert:alert withMessage:@"El servidor esta vacio" withTitle:@"Cuidado!"];
+        return NO;
+    }
 }
 /*
 #pragma mark - Navigation
